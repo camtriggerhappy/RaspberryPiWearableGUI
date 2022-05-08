@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.raspberrypiwearablegui.timeWindow">
+
+      <Label alignment="CENTER" prefHeight="110.0" prefWidth="310.0" fx:id="currentTimelabel">
+         <font>
+            <Font size="62.0" />
+         </font>
+      </Label>
+      <Label text="Label" fx:id="timeLatency"/>
+
+</VBox>
