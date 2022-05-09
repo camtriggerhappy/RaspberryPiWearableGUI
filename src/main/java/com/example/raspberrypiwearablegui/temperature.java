@@ -10,7 +10,7 @@ public class temperature {
     double temperature;
     public temperature(){
         try {
-            File file = new File("/home/cameron/pipe/temp.txt");
+            File file = new File("/home/cameron/pipe/tempPipe");
             tempPipe = new RandomAccessFile(file, "r");
             System.out.println("resolved Pipe");
         } catch (FileNotFoundException e) {
