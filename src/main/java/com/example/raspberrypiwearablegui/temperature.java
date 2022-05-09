@@ -6,12 +6,12 @@ import java.io.*;
  * @apiNote this reads the named pipe that the python file should make
  * */
 public class temperature {
-    FileReader tempPipe;
+    RandomAccessFile tempPipe;
     double temperature;
     public temperature(){
         try {
             File file = new File("/home/cameron/pipe/temp.txt");
-            tempPipe = new FileReader(file);
+            tempPipe = new RandomAccessFile(file, "r");
             System.out.println("resolved Pipe");
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
