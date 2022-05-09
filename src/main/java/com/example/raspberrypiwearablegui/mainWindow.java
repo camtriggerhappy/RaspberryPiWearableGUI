@@ -10,10 +10,13 @@ import javafx.util.Duration;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class timeWindow implements Initializable {
+public class mainWindow implements Initializable {
     time timeNow = new time();
 
     private String currentTime;
+    private String tempText;
+
+    temperature temperature = new temperature();
 
     public void setCurrentTime(String currentTime) {
         this.currentTime = currentTime;
@@ -27,16 +30,28 @@ public class timeWindow implements Initializable {
         currentTimelabel.setText(currentTime);
     }
 
+    public void displayCurrentTemp(){
+        tempLabel.setText(tempText);
+    }
+
     @FXML
     private Label currentTimelabel;
 
     @FXML
-    private Label timeLatency;
+    private Label tempLabel;
+
+
+
+
 
     Timeline timeWriter = new Timeline(new KeyFrame(Duration.seconds(1),
             e -> {
                 currentTime = timeNow.getTime();
                 displayCurrentTime();
+                tempText = String.valueOf(temperature.getTemperature());
+                System.out.println(tempText.toString());
+                displayCurrentTemp();
+
             }
 
         ));

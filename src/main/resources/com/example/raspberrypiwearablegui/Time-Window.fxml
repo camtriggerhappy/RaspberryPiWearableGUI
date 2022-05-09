@@ -4,13 +4,14 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.raspberrypiwearablegui.timeWindow">
+<VBox prefWidth="356.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.raspberrypiwearablegui.mainWindow">
 
-      <Label alignment="CENTER" prefHeight="110.0" prefWidth="310.0" fx:id="currentTimelabel">
+      <Label fx:id="currentTimelabel" alignment="CENTER" prefHeight="320" prefWidth="320">
          <font>
             <Font size="62.0" />
          </font>
       </Label>
-      <Label text="Label" fx:id="timeLatency"/>
+   <Label text="has not read temp" fx:id="tempLabel" />
+
 
 </VBox>

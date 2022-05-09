@@ -11,10 +11,13 @@ import java.net.URL;
 
 
 public class HelloApplication extends Application {
+
+    sceneController sceneController;
     @Override
     public void start(Stage stage) throws IOException {
         URL fxmlLocation = HelloApplication.class.getResource("Time-Window.fxml");
         FXMLLoader fxmlLoader = new FXMLLoader(fxmlLocation);
+
         Scene scene = new Scene(fxmlLoader.load(), 500, 400);
         stage.setTitle("Hello!");
         stage.setScene(scene);
